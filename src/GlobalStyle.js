@@ -1,9 +1,13 @@
+// src/GlobalStyle.js
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    font-family: ${({ theme }) => theme.fonts.body};
+    background-color: ${({ theme }) => theme.colors.primaryBackground};
+    color: ${({ theme }) => theme.colors.primaryText};
   }
 `;
 
