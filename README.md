@@ -9,7 +9,7 @@ Currently, the project includes:
 - **React Application**: Set up with Create React App as a foundation for further development.
 - **Components Folder**: Where individual React components will be organized as the project grows.
 - **Styled Components**: Basic styles and structure using Styled Components for modern and modular CSS management.
-- **ESLint and Prettier Configuration**: Ensuring code quality and consistency.
+- **Biome Configuration**: Ensuring code quality and consistency. (Replaces previous use of ESLint and Prettier)
 
 ## Goals
 
@@ -48,6 +48,7 @@ To run this project locally:
 ## Future Plans
 
 This portfolio will serve as a live showcase of my ongoing journey and projects. As I develop new skills and complete more projects, this repository will grow to reflect that. Follow this repository to see updates as they happen!
+> Note: Biome is now used in place of ESLint and Prettier to streamline the code quality and formatting process in a single tool.
 
 ## Contributing
 
