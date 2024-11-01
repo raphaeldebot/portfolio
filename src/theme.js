@@ -1,14 +1,17 @@
 // src/theme.js
 export default {
     colors: {
-        primaryBackground: '#1a1a2e', // fond principal
-        secondaryBackground: '#252a34', // fond secondaire
-        primaryText: '#e0e0e0', // texte principal
-        accentPink: '#ff6b6b', // rose plus doux
-        accentBlue: '#5cdbd3', // bleu doux
-        cardBackground: '#2e2e3d', // fond des cartes
-        border: '#333', // bordure
-    },
+        primaryBackground: '#0f0c29', // Fond bleu foncé
+        secondaryBackground: '#302b63', // Violet profond
+        primaryText: '#e0e0e0', // Couleur du texte clair
+        secondaryText: '#b0b0b0', // Couleur du texte secondaire
+        accentPink: '#ff6b6b', // Rose doux
+        accentBlue: '#5cdbd3', // Bleu doux
+        accentPurple: '#a64ac9', // Accent violet
+        accentGradient: 'linear-gradient(45deg, #ff6b6b, #a64ac9)', // Accent en dégradé
+        cardBackground: 'rgba(255, 255, 255, 0.1)', // Pour le glassmorphisme
+        border: 'rgba(255, 255, 255, 0.2)', // Bordure semi-transparente
+      },
     fontSizes: {
         title: '3rem',
         subtitle: '1.75rem',
