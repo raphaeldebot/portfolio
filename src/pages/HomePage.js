@@ -8,66 +8,89 @@ const HomePageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  background: linear-gradient(180deg, #1a1a2e, #252a34);
+  min-height: 100vh;
 `;
+
 
 const IntroSection = styled.section`
   text-align: center;
   max-width: 800px;
-  margin: 20px 0;
+  margin: ${({ theme }) => theme.spacing.medium} 0;
+  padding: ${({ theme }) => theme.spacing.medium};
+  background: ${({ theme }) => theme.colors.secondaryBackground};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  box-shadow: ${({ theme }) => theme.shadows.strong};
 `;
 
 const Title = styled.h1`
-  font-size: 2.5rem;
-  color: #333;
+  font-size: 2.8rem;
+  color: ${({ theme }) => theme.colors.accentPink};
+  font-weight: 400; // Plus léger pour un look moderne
+  margin-bottom: 10px;
 `;
 
 const SubTitle = styled.h2`
-  font-size: 1.5rem;
-  color: #666;
+  font-size: 1.6rem;
+  color: ${({ theme }) => theme.colors.accentBlue};
   margin-top: 10px;
 `;
 
+
 const ProjectsSection = styled.section`
   width: 100%;
-  max-width: 1000px;
-  margin: 40px 0;
+  max-width: ${({ theme }) => theme.layout.maxWidthLarge};
+  margin: ${({ theme }) => theme.spacing.large} 0;
 `;
 
 const ProjectCard = styled.div`
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
+  background: ${({ theme }) => theme.colors.cardBackground};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  padding: ${({ theme }) => theme.spacing.medium};
+  margin-bottom: ${({ theme }) => theme.spacing.medium};
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: ${({ theme }) => theme.shadows.light};
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: ${({ theme }) => theme.shadows.strong};
+  }
 `;
 
-// Le composant HomePage qui contient la structure de base de la page d'accueil
+const ProjectTitle = styled.h4`
+  font-size: ${({ theme }) => theme.fontSizes.body};
+  color: ${({ theme }) => theme.colors.primaryText};
+`;
+
+const ProjectDescription = styled.p`
+  color: ${({ theme }) => theme.colors.secondaryText};
+`;
+
 const HomePage = () => {
   return (
     <HomePageContainer>
-      {/* Section d'introduction */}
       <IntroSection>
         <Title>Bienvenue sur mon Portfolio</Title>
         <SubTitle>
           Je suis Debot Raphaël, développeur passionné par le développement web et les technologies modernes.
         </SubTitle>
-        <p>
-          Découvrez mes projets, compétences et contactez-moi pour des opportunités de collaboration.
-        </p>
+        <p>Découvrez mes projets, compétences et contactez-moi pour des opportunités de collaboration.</p>
       </IntroSection>
 
-      {/* Section des projets récents */}
       <ProjectsSection>
         <h3>Projets récents</h3>
-        {/* Exemple de cartes de projets */}
         <ProjectCard>
-          <h4>Projet 1 : Titre du Projet</h4>
-          <p>Brève description de ce projet. Technologies utilisées : React, Node.js, etc.</p>
+          <ProjectTitle>Projet 1 : Titre du Projet</ProjectTitle>
+          <ProjectDescription>
+            Brève description de ce projet. Technologies utilisées : React, Node.js, etc.
+          </ProjectDescription>
         </ProjectCard>
 
         <ProjectCard>
-          <h4>Projet 2 : Titre du Projet</h4>
-          <p>Brève description de ce projet. Technologies utilisées : React, Node.js, etc.</p>
+          <ProjectTitle>Projet 2 : Titre du Projet</ProjectTitle>
+          <ProjectDescription>
+            Brève description de ce projet. Technologies utilisées : React, Node.js, etc.
+          </ProjectDescription>
         </ProjectCard>
       </ProjectsSection>
     </HomePageContainer>
