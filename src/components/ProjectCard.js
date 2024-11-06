@@ -45,7 +45,15 @@ const ReadMoreButton = styled.button`
   }
 `;
 
-const ProjectCard = ({ title, description }) => {
+const IframePreview = styled.iframe`
+  width: 100%;
+  height: 200px;
+  margin-top: ${({ theme }) => theme.spacing.medium};
+  border: none;
+  border-radius: ${({ theme }) => theme.borderRadius};
+`;
+
+const ProjectCard = ({ title, description, iframeUrl }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -60,6 +68,7 @@ const ProjectCard = ({ title, description }) => {
     >
       <ProjectTitle>{title}</ProjectTitle>
       <ProjectDescription>{description}</ProjectDescription>
+      {iframeUrl && <IframePreview src={iframeUrl} title={title} />}
       <ReadMoreButton>En savoir plus</ReadMoreButton>
     </Card>
   );

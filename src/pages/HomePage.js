@@ -29,8 +29,9 @@ const ProjectsGrid = styled.div`
 const HomePage = () => {
   const projects = [
     {
-      title: 'Projet 1 : Application de Chat en Temps Réel',
-      description: 'Une application de chat utilisant Socket.io et Node.js pour une communication en temps réel.',
+      title: 'Projet 1 : Todo List',
+      description: 'Une application pour gérer vos tâches quotidiennes, développée avec React et Styled-Components.',
+      iframeUrl: 'https://raphaeldebot.github.io/todolist/',
     },
     {
       title: 'Projet 2 : Site E-commerce',
@@ -51,6 +52,7 @@ const HomePage = () => {
               key={index}
               title={project.title}
               description={project.description}
+              iframeUrl={project.iframeUrl} // Pass iframeUrl if it exists
             />
           ))}
         </ProjectsGrid>
